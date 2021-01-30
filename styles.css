@@ -1,3 +1,8 @@
+* {
+    box-sizing: border-box;
+    
+}
+
 body {
     background: linear-gradient(to left, #8E0E00, #1F1C18);
 
@@ -19,16 +24,14 @@ p {
     text-align: center;
     width: 60%;
     height: 100%;
-    font-size: 6rem;
+    font-size: 7vw;
     font-family: 'Chewy', cursive;
     color: black;
-    /* border: 2px solid white; */
     border-radius: 15px;
-    /* float: left; */
 }
 
 .title h1 {
-    font-size: 3rem;
+    font-size: 7vh;
     font-family: 'Chewy', cursive;
     color: black;
     text-align: center;
@@ -40,8 +43,6 @@ p {
 items in a vertical direction */
 
 .player {
-    /* position: absolute; */
-    /* margin-top: 5%; */
     width: 40%;
     height: 100%;
     display: flex;
@@ -60,8 +61,8 @@ items in a vertical direction */
 
 .track-art {
     margin: 25px;
-    height: 80px;
-    width: 80px;
+    height: 100px;
+    width: 100px;
     background-image: URL( 
      "https://source.unsplash.com/Qrspubmx6kE/640x360"); 
      background-size: cover;
@@ -164,10 +165,28 @@ i.fa-play-circle, i.fa-pause-circle, i.fa-step-forward, i.fa-step-backward {
     cursor: pointer
 }
 
-button {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    border-radius: 15px;
-}
+@media only screen and (max-width: 780px) {
+    * {
+        margin: 0;
+    }
+    
+    body {
+        width: 100%;
+    }
 
+    .player {
+        width: 100%;
+    }
+
+    .heading {
+        width: 100%;
+    }
+
+    .title h1 {
+        font-size: 2.5rem;
+    }
+
+    .flex-container {
+       display: inline;
+    }
+}
